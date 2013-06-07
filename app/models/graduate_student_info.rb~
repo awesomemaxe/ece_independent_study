@@ -1,0 +1,17 @@
+#class User < ActiveRecord::Base
+#attr_accessible :graduate_student_info_ids
+
+#end
+
+class GraduateStudentInfo < ActiveRecord::Base
+
+#attr_accessible :graduate_student_info_attributes, :another_attribute_to_make_mass_assignable, :another_attribute
+#validates :UID, :last_name, :first_name, :email, :degree, :gender, :international, :cohort, :start_date, :must_achieve_cand_by, :candidacy, :candidacy_expires, :cand_ext_count, :must_defend_prospectus_by, :prospectus, :prosp_ext_count, :dissertation_submitted, :leave_of_absense_start_date, :dropped_down_to_MS, :withdrawn_date, :notes, presence: true
+#validates :UID, :last_name, :first_name, :degree, :gender, :international, :cohort, :start_date, :must_achieve_cand_by, :must_defend_prospectus_by, presence: true
+#validates :UID, uniqueness: true
+#validates :email, :presence => true, allow_blank: true, format: {
+#	with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i,
+#	message: 'This is not an valid email format.'
+#}
+end
+

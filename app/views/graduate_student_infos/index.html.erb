@@ -1,0 +1,63 @@
+<h1>Listing graduate_student_infos</h1>
+
+<table>
+  <tr>
+    <th>Uid</th>
+    <th>Last name</th>
+    <th>First name</th>
+    <th>Email</th>
+    <th>Degree</th>
+    <th>Gender</th>
+    <th>International</th>
+    <th>Cohort</th>
+    <th>Start date</th>
+    <th>Must achieve cand by</th>
+    <th>Candidacy</th>
+    <th>Candidacy expires</th>
+    <th>Cand ext count</th>
+    <th>Must defend prospectus by</th>
+    <th>Prospectus</th>
+    <th>Prosp ext count</th>
+    <th>Dissertation submitted</th>
+    <th>Leave of absence start date</th>
+    <th>Dropped down to ms</th>
+    <th>Withdrawn date</th>
+    <th>Notes</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @graduate_student_infos.each do |graduate_student_info| %>
+  <tr>
+    <td><%= graduate_student_info.UID %></td>
+    <td><%= graduate_student_info.last_name %></td>
+    <td><%= graduate_student_info.first_name %></td>
+    <td><%= graduate_student_info.email %></td>
+    <td><%= graduate_student_info.degree %></td>
+    <td><%= graduate_student_info.gender %></td>
+    <td><%= graduate_student_info.international %></td>
+    <td><%= graduate_student_info.cohort %></td>
+    <td><%= graduate_student_info.start_date %></td>
+    <td><%= graduate_student_info.must_achieve_cand_by %></td>
+    <td><%= graduate_student_info.candidacy %></td>
+    <td><%= graduate_student_info.candidacy_expires %></td>
+    <td><%= graduate_student_info.cand_ext_count %></td>
+    <td><%= graduate_student_info.must_defend_prospectus_by %></td>
+    <td><%= graduate_student_info.prospectus %></td>
+    <td><%= graduate_student_info.prosp_ext_count %></td>
+    <td><%= graduate_student_info.dissertation_submitted %></td>
+    <td><%= graduate_student_info.leave_of_absence_start_date %></td>
+    <td><%= graduate_student_info.dropped_down_to_MS %></td>
+    <td><%= graduate_student_info.withdrawn_date %></td>
+    <td><%= graduate_student_info.notes %></td>
+    <td><%= link_to 'Show', graduate_student_info %></td>
+    <td><%= link_to 'Edit', edit_graduate_student_info_path(graduate_student_info) %></td>
+    <td><%= link_to 'Destroy', graduate_student_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Graduate student info', new_graduate_student_info_path %>

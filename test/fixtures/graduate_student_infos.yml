@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  UID: MyString
+  last_name: MyString
+  first_name: MyString
+  email: MyString
+  degree: MyString
+  gender: MyString
+  international: MyString
+  cohort: MyString
+  start_date: 2013-06-05
+  must_achieve_cand_by: 2013-06-05
+  candidacy: 2013-06-05
+  candidacy_expires: 2013-06-05
+  cand_ext_count: 1
+  must_defend_prospectus_by: 2013-06-05
+  prospectus: 2013-06-05
+  prosp_ext_count: 1
+  dissertation_submitted: 2013-06-05
+  leave_of_absence_start_date: 2013-06-05
+  dropped_down_to_MS: 2013-06-05
+  withdrawn_date: 2013-06-05
+  notes: MyString
+
+two:
+  UID: MyString
+  last_name: MyString
+  first_name: MyString
+  email: MyString
+  degree: MyString
+  gender: MyString
+  international: MyString
+  cohort: MyString
+  start_date: 2013-06-05
+  must_achieve_cand_by: 2013-06-05
+  candidacy: 2013-06-05
+  candidacy_expires: 2013-06-05
+  cand_ext_count: 1
+  must_defend_prospectus_by: 2013-06-05
+  prospectus: 2013-06-05
+  prosp_ext_count: 1
+  dissertation_submitted: 2013-06-05
+  leave_of_absence_start_date: 2013-06-05
+  dropped_down_to_MS: 2013-06-05
+  withdrawn_date: 2013-06-05
+  notes: MyString

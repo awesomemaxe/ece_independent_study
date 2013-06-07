@@ -1,0 +1,110 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Uid:</b>
+  <%= @graduate_student_info.UID %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @graduate_student_info.last_name %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @graduate_student_info.first_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @graduate_student_info.email %>
+</p>
+
+<p>
+  <b>Degree:</b>
+  <%= @graduate_student_info.degree %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @graduate_student_info.gender %>
+</p>
+
+<p>
+  <b>International:</b>
+  <%= @graduate_student_info.international %>
+</p>
+
+<p>
+  <b>Cohort:</b>
+  <%= @graduate_student_info.cohort %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @graduate_student_info.start_date %>
+</p>
+
+<p>
+  <b>Must achieve cand by:</b>
+  <%= @graduate_student_info.must_achieve_cand_by %>
+</p>
+
+<p>
+  <b>Candidacy:</b>
+  <%= @graduate_student_info.candidacy %>
+</p>
+
+<p>
+  <b>Candidacy expires:</b>
+  <%= @graduate_student_info.candidacy_expires %>
+</p>
+
+<p>
+  <b>Cand ext count:</b>
+  <%= @graduate_student_info.cand_ext_count %>
+</p>
+
+<p>
+  <b>Must defend prospectus by:</b>
+  <%= @graduate_student_info.must_defend_prospectus_by %>
+</p>
+
+<p>
+  <b>Prospectus:</b>
+  <%= @graduate_student_info.prospectus %>
+</p>
+
+<p>
+  <b>Prosp ext count:</b>
+  <%= @graduate_student_info.prosp_ext_count %>
+</p>
+
+<p>
+  <b>Dissertation submitted:</b>
+  <%= @graduate_student_info.dissertation_submitted %>
+</p>
+
+<p>
+  <b>Leave of absence start date:</b>
+  <%= @graduate_student_info.leave_of_absence_start_date %>
+</p>
+
+<p>
+  <b>Dropped down to ms:</b>
+  <%= @graduate_student_info.dropped_down_to_MS %>
+</p>
+
+<p>
+  <b>Withdrawn date:</b>
+  <%= @graduate_student_info.withdrawn_date %>
+</p>
+
+<p>
+  <b>Notes:</b>
+  <%= @graduate_student_info.notes %>
+</p>
+
+
+<%= link_to 'Edit', edit_graduate_student_info_path(@graduate_student_info) %> |
+<%= link_to 'Back', graduate_student_infos_path %>

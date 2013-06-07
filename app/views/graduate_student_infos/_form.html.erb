@@ -1,0 +1,106 @@
+<%= form_for(@graduate_student_info) do |f| %>
+  <% if @graduate_student_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@graduate_student_info.errors.count, "error") %> prohibited this graduate_student_info from being saved:</h2>
+
+      <ul>
+      <% @graduate_student_info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :UID %><br />
+    <%= f.text_field :UID %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :degree %><br />
+    <%= f.select :degree, ["pb-pdh-ee","pm-pdh-ee"] %>
+  </div>
+  <div class="field">
+    <%= f.label :gender %><br />
+    <%= f.select :gender, ["male","female"] %>
+  </div>
+  <div class="field">
+    <%= f.label :international %><br />
+    <%= f.select :international, ["yes","no"] %>
+  </div>
+  <div class="field">
+    <%= f.label :cohort %><br />
+    <%= f.text_field :cohort %>
+  </div>
+
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+  </div>
+  <div class="field">
+    <%= f.label :must_achieve_cand_by %><br />
+    <%= f.date_select :must_achieve_cand_by, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+  </div>
+  <% if false %>
+  <% end %>
+  <div class="field">
+    <%= f.label :candidacy %><br />
+    <%= f.date_select :candidacy, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' }%>
+  </div>
+  <% if false %>
+  <div class="field">
+    <%= f.label :candidacy_expires %><br />
+    <%= f.date_select :candidacy_expires %>
+  </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :cand_ext_count %><br />
+    <%= f.number_field :cand_ext_count, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label :must_defend_prospectus_by %><br />
+    <%= f.date_select :must_defend_prospectus_by, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+  </div>
+  <div class="field">
+    <%= f.label :prospectus %><br />
+    <%= f.date_select :prospectus, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+  </div>
+  <div class="field">
+    <%= f.label :prosp_ext_count %><br />
+    <%= f.number_field :prosp_ext_count, :value => 0 %>
+  </div>
+  <div class="field">
+    <%= f.label :dissertation_submitted %><br />
+    <%= f.date_select :dissertation_submitted, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+  </div>
+  <div class="field">
+    <%= f.label :leave_of_absence_start_date %><br />
+    <%= f.date_select :leave_of_absence_start_date, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+  </div>
+  <div class="field">
+    <%= f.label :dropped_down_to_MS %><br />
+    <%= f.date_select :dropped_down_to_MS, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+  </div>
+  <div class="field">
+    <%= f.label :withdrawn_date %><br />
+    <%= f.date_select :withdrawn_date, :prompt => { :day => 'Select day', :month => 'Select month', :year => 'Select year' } %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br />
+    <%= f.text_field :notes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

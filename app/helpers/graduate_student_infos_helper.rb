@@ -1,0 +1,2 @@
+module GraduateStudentInfosHelper
+end
