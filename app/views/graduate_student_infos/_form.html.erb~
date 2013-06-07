@@ -1,5 +1,4 @@
 <%= form_for(@graduate_student_info) do |f| %>
-<%= @graduate_student_info.cohort_conversion %>
   <% if @graduate_student_info.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@graduate_student_info.errors.count, "error") %> prohibited this graduate_student_info from being saved:</h2>
@@ -40,6 +39,16 @@
     <%= f.label :international %><br />
     <%= f.select :international, ["yes","no"] %>
   </div>
+ <% if false %>
+  <div class="field">
+    <%= f.label :cohort_season %><br />
+    <%= f.select :cohort_season, ["fall","spr"] %>
+  </div>
+  <div class="field">
+    <%= f.label :cohort_year %><br />
+    <%= f.date_select :cohort_year, :prompt => { :year => 'Select year' } %>
+  </div>
+  <% end %>
   <div class="field">
     <%= f.label :cohort %><br />
     <%= f.text_field :cohort %>

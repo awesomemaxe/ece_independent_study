@@ -1,7 +1,8 @@
 class GraduateStudentInfo < ActiveRecord::Base
 #before_validation :cohort_conversion
 #after_create :cohort_conversion
-before_save :cohort_conversion
+#before_save :cohort_conversion
+before_create :cohort_conversion
 attr_accessible :UID, :last_name, :first_name, :email, :degree, :gender, :international, :cohort, :start_date, :must_achieve_cand_by, :candidacy, :candidacy_expires, :cand_ext_count, :must_defend_prospectus_by, :prospectus, :prosp_ext_count, :dissertation_submitted, :leave_of_absence_start_date, :dropped_down_to_MS, :withdrawn_date, :notes
 validates :UID, :last_name, :first_name, :degree, :gender, :international, :cohort, :must_achieve_cand_by, :must_defend_prospectus_by, presence: true
 validates :UID, uniqueness: true, format: {
@@ -21,7 +22,9 @@ logger.info("I'm here..............................")
 #message: 'must be y or n'
 
 def cohort_conversion
-	year = cohort[cohort.length-4,4]
+	if cohort.length > 6
+		year = cohort[cohort.length-4,4]
+	end
 	if cohort.include? "fall"
 		# insert in year-09-01 (FALL start)
 		temp = year.concat('-09-01')

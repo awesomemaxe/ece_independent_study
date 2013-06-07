@@ -39,16 +39,6 @@
     <%= f.label :international %><br />
     <%= f.select :international, ["yes","no"] %>
   </div>
- <% if false %>
-  <div class="field">
-    <%= f.label :cohort_season %><br />
-    <%= f.select :cohort_season, ["fall","spr"] %>
-  </div>
-  <div class="field">
-    <%= f.label :cohort_year %><br />
-    <%= f.date_select :cohort_year, :prompt => { :year => 'Select year' } %>
-  </div>
-  <% end %>
   <div class="field">
     <%= f.label :cohort %><br />
     <%= f.text_field :cohort %>
